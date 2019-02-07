@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+sv xilinx_vip  --include "/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/axi_vip_if.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/clk_vip_if.sv" \
+"/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/hdl/rst_vip_if.sv" \
+
+sv xil_defaultlib  -i "../../../../Project.srcs/sources_1/new" --include "/cad1/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Project.srcs/sources_1/new/FMA_sim.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
